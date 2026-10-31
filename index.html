@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تتبع العادات</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h1 class="logo">عاداتي</h1>
+    <nav>
+      <a href="#" class="active">اليوم</a>
+      <a href="#">الأسبوع</a>
+      <a href="#">الإحصائيات</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <h2>لوحة تتبع العادات</h2>
+      <button id="theme-toggle">🌙 الوضع الليلي</button>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <span class="card-label">عدد العادات</span>
+        <span class="card-value" id="total-habits">0</span>
+      </div>
+      <div class="card">
+        <span class="card-label">المُنجز اليوم</span>
+        <span class="card-value" id="done-today">0</span>
+      </div>
+      <div class="card">
+        <span class="card-label">أطول سلسلة (Streak)</span>
+        <span class="card-value" id="streak">0</span>
+      </div>
+      <div class="card">
+        <span class="card-label">نسبة الالتزام الأسبوعية</span>
+        <span class="card-value" id="weekly-rate">0%</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>عاداتي اليوم</h3>
+      <ul id="habits-list" class="habits-list"></ul>
+    </section>
+
+    <section class="charts">
+      <div class="panel">
+        <h3>الالتزام خلال آخر ٧ أيام</h3>
+        <canvas id="weeklyChart"></canvas>
+      </div>
+      <div class="panel">
+        <h3>توزيع العادات حسب التصنيف</h3>
+        <canvas id="categoryChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
